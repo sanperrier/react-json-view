@@ -109,5 +109,8 @@
     "directories": {
         "docs": "docs",
         "test": "test"
-    }
+    },
+    "precommit": [
+        "build"
+    ]
 }
