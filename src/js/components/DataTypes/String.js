@@ -13,7 +13,6 @@ export default class extends React.PureComponent {
         super(props);
         const { stringCollapse, value } = props;
         const collapsed = stringCollapse.map(item => value.indexOf(item) === -1).filter(item => item === false);
-        console.log(stringCollapse);
         this.state = {
             collapsed: AttributeStore.get(
                 props.rjvId,
