@@ -37,7 +37,6 @@ class RjvObject extends React.PureComponent {
     static getState = props => {
         const size = Object.keys(props.src).length;
         const expanded =
-            (props.name == '[html]') ||
             (props.collapsed === false ||
                 (props.collapsed !== true && props.collapsed > props.depth)) &&
             (!props.shouldCollapse ||
