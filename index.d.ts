@@ -134,6 +134,7 @@ export interface ReactJsonViewProps {
    *
    * Default: null
    */
+  stringCollapse?: Array<string>;
   defaultValue?: TypeDefaultValue | TypeDefaultValue[] | null;
 }
 
