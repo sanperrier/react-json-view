@@ -11,7 +11,7 @@ import AttributeStore from './../../stores/ObjectAttributes';
 export default class extends React.PureComponent {
     constructor(props) {
         super(props);
-        const { stringCollapse, namespace } = props;
+        const { stringCollapse, value } = props;
         const collapsed = stringCollapse.map(item => value.indexOf(item) === -1).filter(item => item === false);
         this.state = {
             collapsed: AttributeStore.get(
