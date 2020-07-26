@@ -11,12 +11,14 @@ import AttributeStore from './../../stores/ObjectAttributes';
 export default class extends React.PureComponent {
     constructor(props) {
         super(props);
+        const { stringCollapse, namespace } = props;
+        const collapsed = stringCollapse.map(item => namespace.indexOf(item) === -1).filter(item => item === false);
         this.state = {
             collapsed: AttributeStore.get(
                 props.rjvId,
                 props.namespace,
                 'collapsed',
-                true
+                collapsed.length === 0,
             )
         };
     }
