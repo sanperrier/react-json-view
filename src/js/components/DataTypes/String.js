@@ -43,7 +43,7 @@ export default class extends React.PureComponent {
         const { collapseStringsAfterLength, theme } = props;
         let { value } = props;
         let collapsible = toType(collapseStringsAfterLength) === 'integer';
-        let style = { style: { cursor: 'default' } };
+        let style = { style: { cursor: 'default', whiteSpace: 'normal' } };
 
         if (collapsible && value.length > collapseStringsAfterLength) {
             style.style.cursor = 'pointer';

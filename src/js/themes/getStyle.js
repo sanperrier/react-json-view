@@ -189,7 +189,6 @@ const getDefaultThemeStyling = theme => {
         string: {
             display: 'inline-block',
             color: colors.dataTypes.string,
-            overflowWrap: 'break-word'
         },
         nan: {
             display: 'inline-block',
