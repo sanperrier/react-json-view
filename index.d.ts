@@ -123,11 +123,11 @@ export interface ReactJsonViewProps {
    * Default: "Validation Error"
    */
 
-  onMouseEnter?: ((mouseenter: any) => void) | false;
+  onMouseEnter?: ((mouseenter: any) => false | any) | false;
 
   // When a function is passed in, hovering on a property or value triggers the onMouseEnter method to be called.
 
-  onMouseLeave?: ((mouseleave: any) => void) | false;
+  onMouseLeave?: ((mouseleave: any) => false | any) | false;
 
   // When a function is passed in, hovering on a property or value triggers the onMouseLeave method to be called.
 
