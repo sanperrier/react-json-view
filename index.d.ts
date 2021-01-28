@@ -125,7 +125,11 @@ export interface ReactJsonViewProps {
 
   onMouseEnter?: ((mouseenter: any) => void) | false;
 
+  // When a function is passed in, hovering on a property or value triggers the onMouseEnter method to be called.
+
   onMouseLeave?: ((mouseleave: any) => void) | false;
+
+  // When a function is passed in, hovering on a property or value triggers the onMouseLeave method to be called.
 
   validationMessage?: string;
   /**
