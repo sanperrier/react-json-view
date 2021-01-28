@@ -122,6 +122,11 @@ export interface ReactJsonViewProps {
    *
    * Default: "Validation Error"
    */
+
+  onMouseEnter?: ((mouseenter: any) => void) | false;
+
+  onMouseLeave?: ((mouseleave: any) => void) | false;
+
   validationMessage?: string;
   /**
    * Set to true to sort object keys.
