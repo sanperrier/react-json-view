@@ -21,6 +21,8 @@ import {
     JsonUndefined
 } from './DataTypes/DataTypes';
 
+import VariableRow from "./VariableRow";
+
 //clibboard icon
 import { Edit, CheckCircle, RemoveCircle as Remove } from './icons';
 
@@ -59,8 +61,9 @@ class VariableEditor extends React.PureComponent {
         const { editMode } = this.state;
 
         return (
-            <div
-                {...Theme(theme, 'objectKeyVal', {
+            <VariableRow
+                {...this.props}
+                {...Theme(theme, "objectKeyVal", {
                     paddingLeft: indentWidth * singleIndent
                 })}
                 class="variable-row"
@@ -128,8 +131,8 @@ class VariableEditor extends React.PureComponent {
                 {onDelete !== false && editMode == false
                     ? this.getRemoveIcon()
                     : null}
-            </div>
-        );
+            </VariableRow>
+        )
     }
 
     getEditIcon = () => {

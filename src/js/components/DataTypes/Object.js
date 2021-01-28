@@ -5,10 +5,11 @@ import { toType } from './../../helpers/util';
 //data type components
 import { JsonObject } from './DataTypes';
 
-import VariableEditor from './../VariableEditor';
-import VariableMeta from './../VariableMeta';
-import ArrayGroup from './../ArrayGroup';
-import ObjectName from './../ObjectName';
+import VariableEditor from "./../VariableEditor"
+import VariableMeta from "./../VariableMeta"
+import ArrayGroup from "./../ArrayGroup"
+import ObjectName from "./../ObjectName"
+import VariableRow from "./../VariableRow"
 
 //attribute store
 import AttributeStore from './../../stores/ObjectAttributes';
@@ -197,9 +198,11 @@ class RjvObject extends React.PureComponent {
         }
 
         return (
-            <div
+            <VariableRow
+                {...this.props}
                 class="object-key-val"
-                {...Theme(theme, jsvRoot ? 'jsv-root' : 'objectKeyVal', styles)}
+                {...Theme(theme, jsvRoot ? "jsv-root" : "objectKeyVal", styles)}
+                variable={new JsonVariable(name, src)}
             >
                 {this.getBraceStart(object_type, expanded)}
                 {expanded
@@ -220,8 +223,8 @@ class RjvObject extends React.PureComponent {
                     </span>
                     {expanded ? null : this.getObjectMetaData(src)}
                 </span>
-            </div>
-        );
+            </VariableRow>
+        )
     }
 
     renderObjectContents = (variables, props) => {
