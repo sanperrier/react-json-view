@@ -15,26 +15,32 @@ export default ({
     onMouseEnter={
       !onMouseEnter
         ? null
-        : (e) => {
-            let location = [...namespace];
+        : e => {
+          const x = e.clientX;
+          const y = e.clientY;
+          const target = e.target;
+          let location = [...namespace];
             location.shift();
             onMouseEnter({
               ...variable,
               namespace: location,
-              e
+              target,
+              x,
+              y
             });
           }
     }
     onMouseLeave={
       !onMouseLeave
         ? null
-        : (e) => {
+        : e => {
+            const target = e.target;
             let location = [...namespace];
             location.shift();
             onMouseLeave({
               ...variable,
               namespace: location,
-              e
+              target
             });
           }
     }
