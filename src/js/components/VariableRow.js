@@ -15,24 +15,26 @@ export default ({
     onMouseEnter={
       !onMouseEnter
         ? null
-        : () => {
+        : (e) => {
             let location = [...namespace];
             location.shift();
             onMouseEnter({
               ...variable,
-              namespace: location
+              namespace: location,
+              e
             });
           }
     }
     onMouseLeave={
       !onMouseLeave
         ? null
-        : () => {
+        : (e) => {
             let location = [...namespace];
             location.shift();
             onMouseLeave({
               ...variable,
-              namespace: location
+              namespace: location,
+              e
             });
           }
     }
