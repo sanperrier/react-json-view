@@ -18,7 +18,6 @@ export default ({
         : () => {
             let location = [...namespace];
             location.shift();
-            location.pop();
             onMouseEnter({
               ...variable,
               namespace: location
@@ -31,7 +30,6 @@ export default ({
         : () => {
             let location = [...namespace];
             location.shift();
-            location.pop();
             onMouseLeave({
               ...variable,
               namespace: location
