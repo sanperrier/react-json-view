@@ -123,11 +123,11 @@ export interface ReactJsonViewProps {
    * Default: "Validation Error"
    */
 
-  onMouseEnter?: ((mouseenter: any, event: React.MouseEvent<HTMLDivElement, MouseEvent>) => false | any) | false;
+  onMouseEnter?: ((variable: OnMouse, event: React.MouseEvent<HTMLDivElement, MouseEvent>) => false | any) | false;
 
   // When a function is passed in, hovering on a property or value triggers the onMouseEnter method to be called.
 
-  onMouseLeave?: ((mouseleave: any, event: React.MouseEvent<HTMLDivElement, MouseEvent>) => false | any) | false;
+  onMouseLeave?: ((variable: OnMouse, event: React.MouseEvent<HTMLDivElement, MouseEvent>) => false | any) | false;
 
   // When a function is passed in, hovering on a property or value triggers the onMouseLeave method to be called.
 
@@ -226,6 +226,35 @@ export interface OnSelectProps {
    * List of keys representing the scopes above the selected entry.
    */
   namespace: Array<string | null>;
+
+}
+
+export interface OnMouse {
+  /**
+   * The name of the currently selected entry.
+   */
+  name: string | null;
+  /**
+   * The value of the currently selected entry.
+   */
+  value: object | string | number | boolean | null;
+  /**
+   * The type of the value. For "number" type, it will be replaced with the more
+   * accurate types: "float", "integer", or "nan".
+   */
+  type: string;
+  /**
+   * List of keys representing the scopes above the selected entry.
+   */
+  namespace: Array<string | null>;
+  /**
+   * position of mouseX.
+   */
+  x: number | null;
+  /**
+   * position of mouseY.
+   */
+  y: numer | null;
 
 }
 

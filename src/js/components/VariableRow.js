@@ -18,13 +18,11 @@ export default ({
         : e => {
           const x = e.clientX;
           const y = e.clientY;
-          const target = e.target;
           let location = [...namespace];
             location.shift();
             onMouseEnter({
               ...variable,
               namespace: location,
-              target,
               x,
               y
             });
