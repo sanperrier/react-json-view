@@ -200,7 +200,7 @@ class RjvObject extends React.PureComponent {
         return (
             <VariableRow
                 {...this.props}
-                class="object-key-val"
+                className="object-key-val"
                 {...Theme(theme, jsvRoot ? "jsv-root" : "objectKeyVal", styles)}
                 variable={new JsonVariable(name, src)}
             >

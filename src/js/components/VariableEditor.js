@@ -66,7 +66,7 @@ class VariableEditor extends React.PureComponent {
                 {...Theme(theme, "objectKeyVal", {
                     paddingLeft: indentWidth * singleIndent
                 })}
-                class="variable-row"
+                className="variable-row"
                 key={variable.name}
             >
                 {type == 'array' ? (

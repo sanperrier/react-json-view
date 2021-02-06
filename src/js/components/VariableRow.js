@@ -5,12 +5,13 @@ export default ({
   onMouseLeave,
   namespace,
   children,
+  className,
   variable,
   ...props
 }) => (
   <div
     style={props.style}
-    class="variable-row"
+    class={className}
     key={props.key}
     onMouseEnter={
       !onMouseEnter
