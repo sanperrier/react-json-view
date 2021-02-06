@@ -10,7 +10,7 @@ export default ({
 }) => (
   <div
     style={props.style}
-    class={props.class}
+    class="variable-row"
     key={props.key}
     onMouseEnter={
       !onMouseEnter
